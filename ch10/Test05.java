@@ -22,7 +22,7 @@ public class Test05 {
 		list.add(1, "LA");
 		print(1, list);
 		list.addFirst("런던");
-		Test05.print(2, list);
+		print(2, list);
 		list.addLast("서울");
 		print(3, list);
 
@@ -64,10 +64,10 @@ public class Test05 {
 		list.remove("LA");
 		print(23, list);
 
-		List<String> list2 = Arrays.asList("북경", "상해");
+		List<String> list2 = Arrays.asList("북경", "상해");//배열을 리스트로 만들어줌
 		list.addAll(list2);
 		//list.sort();/Linked List의 sort는 지원되지 않음
-		Object obj[] = list.toArray();
+		Object obj[] = list.toArray();//리스트를 배열로 만들어줌
 		System.out.println("24 : " + Arrays.toString(obj));
 
 		String cities[] = new String[0];

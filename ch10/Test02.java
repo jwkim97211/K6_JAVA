@@ -52,15 +52,15 @@ public class Test02 {
 		Employee e10 = new Employee();
 		
 		//page 460 그림
-		Employee [] arr = new Employee[5];
-		arr[0] = new Employee();
+		Employee [] arr = new Employee[5]; //stack영역에 arr참조변수가 생기고 heap영역에 배열이 생김
+		arr[0] = new Employee(); //arr[0]은 Employee객체를 가르킴
 		//
 		arr[4] = new Employee();
 		
-		int [] num = new int[5];
+		int [] num = new int[5]; //stack영역에 num참조변수가 생기고 heap영역에 배열이 생김
 		num[0] = 10;num[1] = 20; num[2] = 30; //num[1] = 15;// 삽입하려면  
 		
-		Object arr2[] = new Object[10];
+		Object arr2[] = new Object[10]; //배열은 참조변수[index]로 삽입
 		arr2[0]=e1;
 		arr2[1]=e2;
 		arr2[2]=e3;
@@ -71,15 +71,15 @@ public class Test02 {
 		arr2[4] = ix;
 		//int len = arr2[0].length();//에러이다 arr2[0].에 나타나는 메소드는 Object 메소드만 있다: 교재 466페이지 마지막 문단 
 		int len2 = ((String)arr2[3]).length();
-		
-		ArrayList lst = new ArrayList(); //크기가 10인 리스트를 생성
-		lst.add(s);
+		ArrayList lst = new ArrayList(); //크기가 10인 리스트를 생성(타입을 정의하지 않아서 object임. String,int 다 들어갈 수 있음)
+		lst.add(s);						//리스트는 [index]가 아닌 add로 삽입
 		lst.add(ix);
-		//int len3 = list.get(0).length();//오류 > list.get(0).은 Object이기 때문이다.
+		lst.add(1,"good"); //[1]에 "good"을 넣고 ix는 뒤로 미룸
+//		int len3 = lst.get(0).length();//오류 > list.get(0).은 Object이기 때문이다.(74번 코드), object에는 length없음
 		int len4 = ((String)lst.get(0)).length();
 		
 		//페이지 468 -  generic 타입을 학습
-		List<String> list = new ArrayList<String>();//크기가 10인 리스트 생성
+		List<String> list = new ArrayList<String>();//크기가 10인 리스트 생성,List<String> list = new ArrayList()으로도 가능
 		list.add("서울");
 		list.add("북경");
 		list.add("상해");
@@ -91,13 +91,13 @@ public class Test02 {
 		Collections.sort(list);
 		//list.sort(comparator);
 		System.out.println("0: 정렬후:: ");
-		for (String element : list) {
+		for (String element : list) { //확장형 for문
 			System.out.print(element+" ");
 		}
 		System.out.println();
 		
-		for (int i = 0; i <list.size(); i++)
-			System.out.print("list.size()를 사용한 출력:: " + list.get(i));
+		for (int i = 0; i <list.size(); i++)	//확장형 for문말고 for 문을 사용할 경우
+			System.out.print(list.get(i) + " ");
 		
 		System.out.println("\n==============");
 		System.out.println("1: " + list.toString());//ArrayList에 override된 메소드

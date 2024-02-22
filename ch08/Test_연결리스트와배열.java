@@ -48,26 +48,21 @@ class LinkedList3 {
 	void insert(int data) {
 		Node3 newNode = new Node3(data);
 		Node3 p = first, q = null;
-		if (p == null) {
-			first = newNode;
-		} else {
-			while (p != null) {
-				if (p.data > data) {
-					newNode.link = p;
-					if (q == null) {
-						first = newNode;
-					} else {
-						q.link = newNode;
-					}
-					break;
+		while (p != null) {
+			if (p.data > data) {
+				newNode.link = p;
+				if (q == null) {
+					first = newNode;
 				} else {
-					q = p;
-					p = p.link;
+					q.link = newNode;
 				}
+				break;
+			} else {
+				q = p;
+				p = p.link;
 			}
 		}
 	}
-
 }
 
 public class Test_연결리스트와배열 {
