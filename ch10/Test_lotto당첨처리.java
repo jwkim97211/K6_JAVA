@@ -52,10 +52,11 @@ public class Test_lotto당첨처리 {
 			 * 33 1 17 22 6 8 8 1 18 38 6 24
 			 */
 			// 구현할 부분
+			System.out.println(eachLotto.toString());
 		}
-		// hashset의 리스트를 정렬하는 알고리즘 개발
-		// hashset를 arrayList로 변환
-		// 당첨번호 추첨
+//		 hashset의 리스트를 정렬하는 알고리즘 개발
+//		 hashset를 arrayList로 변환
+//		 당첨번호 추첨
 		HashSet<Integer> win = new HashSet<>();
 		for (int j = 0; win.size() < 6; j++) {
 			win.add(1 + number.nextInt(45));
@@ -64,53 +65,54 @@ public class Test_lotto당첨처리 {
 		System.out.print("당첨번호 : " + win + "보너스번호 : " + bonus);// 6개의 당첨번호와 보너스번호
 		// 6개를 맞힌 복권을 찾는다
 		System.out.println();
-		winnerLotto(win, bonus, lotSet);// 1등을 찾는다
+//		winnerLotto(win, bonus, lotSet);// 1등을 찾는다
 
 	}
-
+//
 	static void winnerLotto(HashSet<Integer> w, int bonus, List<HashSet<Integer>> lotSet) {
-		// 당첨번호 w에 대하여 발행된 복권 리스트 lotSet의 모든 원소 elem에 대하여 조사한다
+//		// 당첨번호 w에 대하여 발행된 복권 리스트 lotSet의 모든 원소 elem에 대하여 조사한다
 		for (int i = 0; i < lotSet.size(); i++) {
-			// 구현할 부분
-			checkWinner(w,bonus,lotSet.get(i));
-		}
-	}
-
-	static void checkWinner(HashSet<Integer> w, int bonus, List<Integer> elem) {
-		// 당첨번호 w의 각 숫자를 꺼내 복권 엔트리에 포함되어 있는지를 조사
-		List<Integer> L = new ArrayList<>(w);
-		int count = 0;
-		for (int i = 0; i < L.size() - 1; i++) {
-			/*
-			 * 당첨번호 각 번호를 몇개 포함하는지를 elem에 대하여 조사
-			 */
-			// 구현할 부분
-		}
-		switch (count) {
-		case 0:
-		case 1:
-		case 2:
-			System.out.println("꽝");
-			break;
-		case 3:
-			System.out.println("5등 복권 " + elem + " 당첨번호:" + w);
-			break;
-		case 4:
-			System.out.println("4등 복권 " + elem + " 당첨번호:" + w);
-			break;
-		case 5: //수정필요
-			if (L.get(6).equals(elem.get(6))) {  보너스 번호가 일치하는 지를 조사
-				System.out.println("2등 복권 " + elem + " 당첨번호:" + w);
-				break;
-			} else {
-				System.out.println("3등 복권 " + elem + " 당첨번호:" + w);
-				break;
-			}
-
-		case 6:
-			System.out.println("1등 복권 " + elem + " 당첨번호:" + w);
-			break;
-		}
-
+//			// 구현할 부분
+			
+//			checkWinner(w,bonus,lotSet.get(i));
+//		}
+//	}
+//
+//	static void checkWinner(HashSet<Integer> w, int bonus, List<Integer> elem) {
+//		// 당첨번호 w의 각 숫자를 꺼내 복권 엔트리에 포함되어 있는지를 조사
+//		List<Integer> L = new ArrayList<>(w);
+//		int count = 0;
+//		for (int i = 0; i < L.size() - 1; i++) {
+//			/*
+//			 * 당첨번호 각 번호를 몇개 포함하는지를 elem에 대하여 조사
+//			 */
+//			// 구현할 부분
+//		}
+//		switch (count) {
+//		case 0:
+//		case 1:
+//		case 2:
+//			System.out.println("꽝");
+//			break;
+//		case 3:
+//			System.out.println("5등 복권 " + elem + " 당첨번호:" + w);
+//			break;
+//		case 4:
+//			System.out.println("4등 복권 " + elem + " 당첨번호:" + w);
+//			break;
+//		case 5: //수정필요
+//			if (L.get(6).equals(elem.get(6))) {  보너스 번호가 일치하는 지를 조사
+//				System.out.println("2등 복권 " + elem + " 당첨번호:" + w);
+//				break;
+//			} else {
+//				System.out.println("3등 복권 " + elem + " 당첨번호:" + w);
+//				break;
+//			}
+//
+//		case 6:
+//			System.out.println("1등 복권 " + elem + " 당첨번호:" + w);
+//			break;
+//		}
+//
 	}
 }
