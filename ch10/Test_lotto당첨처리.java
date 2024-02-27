@@ -54,7 +54,6 @@ public class Test_lotto당첨처리 {
 	}
 
 	static void checkWinner(HashSet<Integer> w, int bonus, HashSet<Integer> elem) {
-		List<Integer> L = new ArrayList<>(w);
 		int count = 0;
 		for (int i : w) {
 			if (elem.contains(i)) {
