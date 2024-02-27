@@ -14,7 +14,7 @@ public class Test38_1 {
 		for(int i=0; i<score.length; i++) {
 			for(int j=0; j<score[i].length; j++) {
 				if(i==j) System.out.print(score[i][j] + " ");
-				else System.out.println("\t");
+				else System.out.print("\t");
 			}
 			System.out.println("\n");
 		}
