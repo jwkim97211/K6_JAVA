@@ -1,4 +1,4 @@
-package quiz;
+package com.ruby.java.quiz;
 
 import java.util.Scanner;
 

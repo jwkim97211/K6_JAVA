@@ -1,4 +1,4 @@
-package quiz;
+package com.ruby.java.quiz;
 
 import java.util.Scanner;
 
@@ -21,7 +21,7 @@ public class gugudan {
 
 	}
 
-	public void hori() {
+	public void horizontal() {
 		for (int i = 1; i <= 9; i++) {
 			for (int j = 2; j <= 9; j++) {
 				System.out.print(j + "*" + i + "=" + i * j + "\t");
@@ -30,13 +30,16 @@ public class gugudan {
 		}
 	}
 
-	public void three() {
-		for (int i = 2; i <= 9; i+=3) {
-			for (int j = 2; j <= 9; j++) {
-				for (int k = 1; k <= 9; k++) {
-
+	public void three(int col) {
+		for (int i = 2; i <= 9 ; i += col) {
+			for (int j = 1; j <= 9; j++) {
+				for (int k = 0; k < col; k++) {
+					if(i+k<=9)
+					System.out.print((i + k) + "*" + j + "=" + (i + k) * j + "\t");
 				}
+				System.out.println();
 			}
+			System.out.println();
 		}
 	}
 }
