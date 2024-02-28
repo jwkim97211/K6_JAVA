@@ -5,17 +5,14 @@ public class gugudanTest {
 		gugudan ggd = new gugudan();
 
 		System.out.println("Start");
-		ggd.print(2);
+		ggd.printVertical();
+//		ggd.random();
 		System.out.println("-".repeat(15));
-		ggd.print(3);
+		ggd.printHorizontal();
 		System.out.println("-".repeat(15));
-		ggd.print(4);
+		ggd.printColumn(3);
 		System.out.println("-".repeat(15));
-		ggd.random();
-		System.out.println("-".repeat(15));
-		ggd.horizontal();
-		System.out.println("-".repeat(15));
-		ggd.three(3);
+		ggd.printColumn(4);
 		System.out.println("-".repeat(15));
 		System.out.println("End");
 	}
