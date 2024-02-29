@@ -1,6 +1,6 @@
 package com.ruby.java.quiz;
 
-public class year {
+public class Year {
 
 	public int[] check(int year, int count) {
 		int arr[]=new int[count];
@@ -26,7 +26,7 @@ public class year {
 		
 	}
 	public static void main(String[] args) {
-		year y = new year();
+		Year y = new Year();
 		int x[]= y.check(2023,10);
 		for(int i=0;i<x.length;i++)
 			System.out.println(x[i]);
